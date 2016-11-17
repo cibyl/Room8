@@ -1,0 +1,162 @@
+#menu {
+  width: 100%;
+  min-height: 70px;
+  position: fixed;
+  background: rgba(0,0,0,0.9);
+  bottom: 0;
+  z-index: 9;
+}
+
+.menu-wrapper {
+  width: 70%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.menu-wrapper ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.menu-wrapper ul li {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  float: left;
+  text-transform: uppercase;
+}
+
+.menu-wrapper ul li a {
+  font-weight: 900;
+  font-size: 1.2em;
+  color: rgba(255,255,255,1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.menu-wrapper ul li a:hover {
+  text-decoration: none;
+  color: rgba(255,255,255,0.4);
+}
+
+#topo {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/imagem_centro.png');
+  background-size: cover;
+  /*background-origin: center center;*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+}
+
+#topo .wrapper-centro {
+  width: 70%;
+  max-width: 970px;
+  margin: 0;
+  color: #ffffff;
+  font-weight: 900;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#topo .wrapper-centro h1 {
+  font-size: 4em;
+}
+
+.logout {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.shadow {
+  /*text-shadow: 1px 1px 1px #000, 2px 2px 3px #fff;*/
+  /*text-shadow: 1px 1px 1px #333;*/
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.margin-50 {
+  margin-top: 50px;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+.margin-30 {
+  margin-bottom: 30px;
+}
+
+#imoveis {
+  width: 100%;
+  height: auto;
+  background: #FFFFFF;
+  padding: 54px 0;
+}
+
+.imoveis-wrapper{
+  margin: 0 auto;
+  width: 70%;
+  max-width: 1040px;
+}
+
+#quemsomos {
+  width: 100%;
+  background: rgba(0,0,0,0.9);
+  padding: 54px 0;
+}
+
+.quemsomos-wrapper {
+  margin: 0 auto;
+  width: 70%;
+  max-width: 1040px;
+}
+
+.branco {
+  color: #FFFFFF;
+}
+
+.cinza {
+  color: #999999;
+}
+
+.imoveis-box {
+  width: 100%;
+  min-height: 350px;
+}
+
+.imoveis-box .imagem {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.imoveis-box .imagem img {
+  width: 100%;
+  height: 180px;
+  object-fit:contain;
+}
+
+.imoveis-box-2 {
+  width: 100%;
+  min-height: auto;
+  margin-top: 10px;
+}
+
+.imoveis-box-2 .imagem {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.imoveis-box-2 .imagem img {
+  width: 100%;
+  height: 180px;
+  object-fit:contain;
+}

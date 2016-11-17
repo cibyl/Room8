@@ -1,0 +1,87 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Room8</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="{% static "app/css/bootstrap.css" %}" rel="stylesheet">
+	<link href="{% static "app/css/bootstrap-theme.css" %}" rel="stylesheet">
+
+	<link href="{% static "app/css/style.css" %}" rel="stylesheet">
+	<link href="{% static "app/css/font-awesome.css" %}" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="{% static "app/js/jquery.js" %}"></script>
+
+</head>
+<body>
+	{% if user.is_authenticated %}
+		<nav id="menu">
+			<div class="menu-wrapper">
+				<ul class="clearfix">
+					{% if request.get_full_path == "/" %}
+						<li><a id="imoveisBtn">Imóveis</a></li>
+					{% else %}
+						<li><a href="{% url "app:home" %}#imoveis">Imóveis</a></li>
+					{% endif %}
+					<li><a href="{% url "app:listaImoveis" %}">Meus Imóveis</a></li>
+					<!-- <li><a href="">Acervo</a></li> -->
+					<li><a href="">Serviços</a></li>
+					<li><a href="">Lazer</a></li>
+					{% if request.get_full_path == "/" %}
+						<li><a id="aboutUsBtn">About Us</a></li>
+					{% else %}
+						<li><a href="{% url "app:home" %}#quemsomos">About Us</a></li>
+					{% endif %}
+				</ul>
+			</div>
+		</nav>
+	{% endif %}
+
+	{% block content %}{% endblock %}
+
+	<script type="text/javascript" src="{% static "app/js/bootstrap.js" %}"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+
+
+		// scrolls
+
+		$('#imoveisBtn').click(function(){
+			target_offset = $('#imoveis').offset();
+			target_top = target_offset.top;
+			$('html, body').animate({
+				scrollTop: target_top
+			}, 800);
+		});
+
+		$('#aboutUsBtn').click(function(){
+			target_offset = $('#quemsomos').offset();
+			target_top = target_offset.top;
+			$('html, body').animate({
+				scrollTop: target_top
+			}, 800);
+		});
+
+	});
+
+</script>
+
+<script type="text/javascript" src="{% static "app/js/voltacep.js" %}"></script>
+<script type="text/javascript" src="{% static "app/js/mask.js" %}"></script>
+<script type="text/javascript" src="{% static "app/js/maskconfig.js" %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<section id="topo">
+		{% if user.is_authenticated %}
+		<div class="logout">
+			<p class="branco">Bem vindo {{ user.nome }}!   <a class="branco" href="{% url "app:logout" %}"><strong>logout</strong></a></p>
+		</div>
+		{% endif %}
+		<div class="wrapper-centro">
+			<h1 class="shadow">Room<strong>8</strong><small>.com</small></h1>
+			{% if not user.is_authenticated %}
+				<div class="col-lg-12 margin-50">
+					<div class="col-lg-6">
+						<a href="{% url "app:login" %}" class="btn btn-lg btn-block btn-default">LOGIN</a>
+					</div>
+					<div class="col-lg-6">
+						<a href="{% url "app:cadastro" %}" class="btn btn-lg btn-block btn-default">CADASTRO</a>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</section>
+	{% if user.is_authenticated %}
+		<section id="imoveis" class="clearfix">
+
+			<div class="imoveis-wrapper text-center">
+				<h3 class="margin-30">Imóveis</h3>
+				{% for imovel in imoveis %}
+				<div class="col-lg-4 margin-30">
+					<div class="imoveis-box ">
+						<div class="imagem">
+							<img src="/media/{{ imovel.arquivo }}" alt="">
+						</div>
+						<h4>R$ {{ imovel.valor }}</h4>
+						<p>{{ imovel.logradouro }}, {{ imovel.numero }}</p>
+						<p>{{ imovel.cidade }}, {{ imovel.uf }}</p>
+						<p>{{ imovel.titulo }}</p>
+						<a href="{% url "app:imovel" imovel.pk %}">VEJA MAIS</a>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+
+		</section>
+
+		<section id="quemsomos">
+
+			<div class="quemsomos-wrapper text-center">
+				<h3 class="margin-30 branco">About Us</h3>
+				<p class="cinza">Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gente num é. Praesent alesuada nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. A ordem dos tratores não altera o pão duris undefined.</p>
+				<p class="cinza">Mais vale um bebadis conhecidiss, que um alcoolatra anonimiss. Detraxit consequat et quo num tendi nada. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Delegadis gente finis, bibendum egestas augue arcu ut est.</p>
+				<p class="cinza">Ta deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.” Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Manduma pindureta quium dia nois paga. Interagi no mé, cursus quis, vehicula ac nisi.</p>
+				<p class="cinza">Viva Forevis aptent taciti sociosqu ad litora torquent Per aumento de cachacis, eu reclamis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Casamentiss faiz malandris se pirulitá.</p>
+			</div>
+
+		</section>
+	{% endif %}
+
+{% endblock %}

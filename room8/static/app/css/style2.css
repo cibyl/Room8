@@ -1,0 +1,105 @@
+body {
+  background : #333333;
+}
+
+.sup-block {
+  width: 100%;
+  min-height: 27px;
+  background: #0f0303;
+  position: relative;
+}
+
+.topo-main {
+  width: 100%;
+  min-height: 308px;
+  background: #333333;
+}
+
+#menu-wrapper {
+  width: 100%;
+  /*background: #140a0a;*/
+  background: rgba(20,10,10,0.7);
+  /*box-shadow: 3px 3px 3px rgba(0,0,0,0.7);*/
+  /*z-index: 999 !important;*/
+  position: relative;
+}
+
+.mid-faixa {
+  top: 73px;
+  width: 100%;
+  min-height: 7px;
+  background: #312727;
+  position: absolute;
+}
+
+#mid-menu {
+  width: 90%;
+  max-width: 1030px;
+  min-height: 124px;
+  margin: 0 auto;
+  z-index: 999;
+}
+
+.cidade {
+  width: 100%;
+  min-height: 33px;
+
+}
+
+.cidade img {
+  width: 100%;
+  margin-top: -297px;
+}
+
+.menu {
+  width: 100%;
+  min-height: 40px;
+  background: #130303;
+  font-family: 'Anton', sans-serif;
+  border-bottom: solid 7px #312727;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0 0 0 50px !important;
+}
+
+.menu ul li {
+  display: inline-block;
+  font-size: 29px;
+  margin-left: 50px;
+}
+
+.menu ul li a {
+  color: #999999;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu ul li a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.menu-bot {
+  width: 100%;
+  min-height: 44px;
+  background: #130303;
+}
+
+#mid-wrapper {
+  width: 90%;
+  max-width: 1030px;
+  min-height: 2024px;
+  margin: 0 auto;
+  background: #999;
+  -webkit-box-shadow: 0px 0px 31px 6px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 31px 6px rgba(0,0,0,1);
+  box-shadow: 0px 0px 31px 6px rgba(0,0,0,1);
+  position: relative;
+}
+
+#mid-wrapper  .main-content {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+}

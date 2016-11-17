@@ -1,0 +1,133 @@
+html {
+	overflow-x: hidden;
+}
+
+.navbar {
+	min-height: 65px;
+}
+
+.navbar-default {
+	background-color: #eff0ef;
+}
+
+.navbar-right {
+	min-height: 65px;
+}
+
+.navbar-nav > li a {
+	padding-top: 20px;
+	min-height: 65px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #333;
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+	/*background-color: #999;*/
+	background-color: transparent;
+	/*color: #ffffff;*/
+	color: #333;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	/*background-color: #999;*/
+	background-color: transparent;
+	/*color: #ffffff;*/
+	color: #333;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	/*background-color: #999;*/
+	background-color: transparent;
+	color: #333;
+}
+
+.navbar-default .dropdown-menu > li > a:hover, .navbar-default .dropdown-menu > .active > a, .navbar-default .dropdown-menu > .active > a:hover {
+	background-color: #999;
+	/*background-color: transparent;*/
+	color: #ffffff;
+	/*color: #333;*/
+}
+
+.navbar-default .dropdown-menu {
+	background-color: #eff0ef;
+}
+.navbar-default .dropdown-menu li a {
+	color: #333;
+}
+
+.dropdown-menu .divider {
+	margin: 0;
+}
+
+#meio {
+	margin-top: 40px;
+	position: relative;
+	display: block;
+}
+
+.inner-desc {
+	margin-bottom: 40px;
+}
+
+.inner-desc img {
+	width: 100% !important;
+	height: 200px !important;
+	/*border-radius: 100%;*/
+}
+
+.btn-arcarius {
+	background-color: #0084c8;
+	border-radius: 10px;
+	color: #ffffff;
+}
+.btn-arcarius:hover {
+	color: #ffffff;
+}
+
+.bot-10 {
+	margin-bottom: 30px;
+}
+
+.pad-bot-20 {
+	padding-bottom: 20px;
+}
+
+.top-20 {
+	margin-top: 20px;
+}
+
+#tabularAbout {
+	width: 100%;
+	background-color: #e7e7e7;
+}
+
+.inner-tabular-about {
+	margin: 21px 0 0 0;
+}
+
+#tabularAbout img {
+	max-width: inherit;
+	max-height: 350px;
+	margin: 0;
+}
+#tabularAbout h4 {
+	margin: 0 0 10.5px 0;
+}
+
+footer {
+	width: 100%;
+	color: #ffffff;
+	background-color: #0084c8;
+	border-top: 5px solid #ffffff;
+	padding: 20px 0;
+}
+
+footer a {
+	color: #ffffff;
+}
+
+footer a:hover {
+	color: #ffffff;
+}
